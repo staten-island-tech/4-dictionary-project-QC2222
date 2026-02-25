@@ -15,19 +15,20 @@ wares = [{
     "name": "Number #2 HB Pencil",
     "price": 0.19,
     "mass": "0.05 kilograms, 0.11 pounds",
-    "stock": [2, "two"]
+    "stock": 2
 },
 {
     "name": "The Sun",
-    "price": 5,
-    "mass": "1,900,000,000,000,000,000,000,000,000,000 kilograms, 4.188782981512674e+30 pounds",
+    "price": 5.13,
+    "mass": "1,900,000,000,000,000,000,000,000,000,000 kilograms, 4188782981512674000000000000000 pounds",
     "stock": 1
 },
 {
     "name": "TON 618",
     "price": 15.99,
-    "mass": "66 billion solar masses, 2.8939798982e+41",
+    "mass": "66 billion solar masses, 2.8939798982e+41 pounds",
     "stock": 3
 }]
 print("Welcome to my humble store! Here are my wares:")
-print(wares["name"])
+for i in range(5):
+    print((i + 1), ": ", wares[i]["name"])
