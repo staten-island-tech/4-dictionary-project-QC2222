@@ -27,7 +27,11 @@ print("Welcome to my humble store! Here are my wares:")
 for index, item in enumerate(wares):
     print((index + 1), ":", item["name"])
 cart = []
+total = 0
 request = input("What would you like to purchase?")
 for index, item in enumerate(wares):
     if request == item["name"]:
-        cart.append
+        cart.append(request)
+    elif item == 4:
+        print("Item not found.")
+print(cart)
