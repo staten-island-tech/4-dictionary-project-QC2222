@@ -28,10 +28,18 @@ for index, item in enumerate(wares):
     print((index + 1), ":", item["name"])
 cart = []
 total = 0
-request = input("What would you like to purchase?")
-for index, item in enumerate(wares):
-    if request == item["name"]:
-        cart.append(request)
-    elif item == 4:
+request = 0
+while request != "Exit":
+    request = input("What would you like to purchase, 1 through 5? Or enter \"Exit\" to leave.     ")
+    if request != "Exit":
+        request = int(request)
+    else:
+        break
+    if request > 0 and request < 6:
+        cart.append(wares[request - 1]["name"])
+        total += wares[request - 1]["price"]
+        print(wares[request - 1]["name"], "added to cart.")
+    else:
         print("Item not found.")
-print(cart)
+print("Cart: ", cart)
+print("Your total comes down to: $", total)

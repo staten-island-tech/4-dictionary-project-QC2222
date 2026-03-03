@@ -26,3 +26,5 @@ wares = [{
 print("Welcome to my humble store! Here are my wares:")
 for index, item in enumerate(wares):
     print((index + 1), ":", item["name"])
+request = int(input("What would you like to purchase, 1 through 5?  "))
+print(wares[request - 1]["name"])
